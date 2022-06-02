@@ -1,0 +1,69 @@
+@base          <file:///home/gkirtzou/OneDrive/Projects/Lexis/Source/lexis-rdf-fintan-conversion/mapping.tarql> .
+@prefix conll:  <https://github.com/acoli-repo/conll-rdf/blob/master/owl/conll.ttl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#preposition>
+        conll:replace  "Adposition Preposition" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#definiteArticle>
+        conll:replace  "Article Definite" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#indefiniteArticle>
+        conll:replace  "Article Indefinite" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#coordinatingConjunction>
+        conll:replace  "Conjunction Coordinative" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#subordinatingConjunction>
+        conll:replace  "Conjunction Subordinative" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#cardinalNumeral>
+        conll:replace  "Numeral Cardinal" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#multiplicativeNumeral>
+        conll:replace  "Numeral Multiplicative" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#commonNoun>
+        conll:replace  "Noun Common" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#properNoun>
+        conll:replace  "Noun Proper" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#demonstrativePronoun>
+        conll:replace  "Pronoun Demonstrative" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#indefinitePronoun>
+        conll:replace  "Pronoun Indefinite" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#interrogativePronoun>
+        conll:replace  "Pronoun Interrogative" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#personalPronoun>
+        conll:replace  "Pronoun Personal" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#possessivePronoun>
+        conll:replace  "Pronoun Possessive" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#relativePronoun>
+        conll:replace  "Pronoun Relative" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#reflexivePersonalPronoun>
+        conll:replace  "Pronoun Reflexive" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#irreflexivePersonalPronoun>
+        conll:replace  "Pronoun Relindef" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#futureParticle>
+        conll:replace  "Unique Future" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#negativeParticle>
+        conll:replace  "Unique Negation" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#particle>
+        conll:replace  "Unique Other" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#symbol>
+        conll:replace  "Residual Symbol" .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo#mainVerb>
+        conll:replace  "Verb Main" .
