@@ -1,4 +1,4 @@
-@base          <file:///home/gkirtzou/OneDrive/Projects/Lexis/Source/lexis-rdf-fintan-conversion/mapping.tarql> .
+@base          <file:///home/gkirtzou/OneDrive/Projects/Lexis/Source/lexis-transforming-sql-to-rdf/scripts/gramcatConstructMapping.tarql> .
 @prefix conll:  <https://github.com/acoli-repo/conll-rdf/blob/master/owl/conll.ttl#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
