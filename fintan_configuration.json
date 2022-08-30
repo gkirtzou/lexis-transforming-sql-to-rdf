@@ -36,19 +36,19 @@
     // Stream 1
 		// Read Lexical entry from SQL db and load to Fintan
 		{
-			"readsFromSource": "lexicalEntriesExportFromSQL",
+			"readsFromInstance": "lexicalEntriesExportFromSQL",
 			"writesToInstance": "lexicalEntriesLoadFromSQL",
 			"writesToInstanceGraph": "lexicalEntries"
 		},		
 		// Export TSV results from db export
     {
-      "readsFromSource": "lexicalEntriesLoadFromSQL",
+      "readsFromInstance": "lexicalEntriesLoadFromSQL",
       "readsFromInstanceGraph": "lexicalEntries", 
       "writesToInstance": "lexicalEntriesWriteToFile",
       "writesToInstanceGraph": ""
     },
     {
-      "readsFromSource": "lexicalEntriesWriteToFile",
+      "readsFromInstance": "lexicalEntriesWriteToFile",
       "readFromInstanceGraph": "",
       "writesToDestination": "LexisFinalRDF/exportedLexicalEntriesMapping.ttl"
     }
