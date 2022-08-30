@@ -5,11 +5,9 @@ PREFIX ontolex: <http://www.w3.org/ns/lemon/ontolex>
 PREFIX lexis: <http://www.exaple.com/lexis>
 
 CONSTRUCT {
-  ?le_uri rdf:type ontolex:LexicalEntry;
-          rdfs:label ?col2@el;
-          lexis:partOfSpeech ?col3;
-          lexinfo:partOfSpeech ?col3;
+  ?le_uri rdf:type ontolex:LexicalEntry.
 }
 WHERE {
   BIND(URI(CONCAT('http://www.exaple.com/lexis/LexicalEntry', ?col1)) as ?le_uri)
+
 }
