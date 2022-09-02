@@ -19,37 +19,44 @@
       "emptyChar": "_"
     },		
     {
-      "componentInstance": "lexicalEntriesLoadFromSQL",
-      "class": "RDFStreamLoader",
-      "lang": "Turtle",
-      "globalPrefixes": true,
-      "delimiter": null,
-      "split": false
+      "componentInstance" : "duplicateSqlResults",
+      "class" : "IOStreamDuplicator"
     },
     {
-      "componentInstance": "lexicalEntriesWriteToFile",
-      "class": "RDFStreamWriter",
-      "lang": "Turtle"
+      "componentInstance": "lexicalEntriesMappingTarql",
+      "class": "TarqlStreamTransformer",
+      "query" : "scripts/lexicalEntriesConstructMapping.tarql",
+      "delimiterCSV": "\t",
+      "tabs": "no",
+      "quoteChar": null,
+      "escapeChar": null,
+      "encoding": "UTF-8",
+      "headerRow": false,
+      "baseIRI": null,
+      "write-base": null,
+      "dedup": "0"
     }
+   
   ],
   "streams": [
     // Stream 1
 		// Read Lexical entry from SQL db and load to Fintan
 		{
 			"readsFromInstance": "lexicalEntriesExportFromSQL",
-			"writesToInstance": "lexicalEntriesLoadFromSQL",
-			"writesToInstanceGraph": "lexicalEntries"
+			"writesToInstance": "duplicateSqlResults"
 		},		
+
+    {
+      "readsFromInstance": "duplicateSqlResults",
+      "writesToInstance": "lexicalEntriesMappingTarql"
+    },  
+    {
+      "readsFromInstance": "duplicateSqlResults",
+      "writesToDestination": "LexisFinalRDF/exportedSqlResults.tsv"
+    },      
 		// Export TSV results from db export
     {
-      "readsFromInstance": "lexicalEntriesLoadFromSQL",
-      "readsFromInstanceGraph": "lexicalEntries", 
-      "writesToInstance": "lexicalEntriesWriteToFile",
-      "writesToInstanceGraph": ""
-    },
-    {
-      "readsFromInstance": "lexicalEntriesWriteToFile",
-      "readFromInstanceGraph": "",
+      "readsFromInstance": "lexicalEntriesMappingTarql",
       "writesToDestination": "LexisFinalRDF/exportedLexicalEntriesMapping.ttl"
     }
   ]

@@ -1,0 +1,46 @@
+@base          <file:///home/gkirtzou/OneDrive/Projects/Lexis/Source/lexis-transforming-sql-to-rdf/scripts/lexicalEntriesConstructMapping.tarql> .
+@prefix lexis:  <http://www.exaple.com/lexis> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema> .
+@prefix ontolex:  <http://www.w3.org/ns/lemon/ontolex> .
+@prefix lexinfo:  <http://www.lexinfo.net/ontology/3.0/lexinfo> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns> .
+
+<http://www.exaple.com/lexis/LexicalEntryUMAd10011>
+        rdf:type    ontolex:LexicalEntry ;
+        rdfs:label  "μεγαλόψυχα" .
+
+<http://www.exaple.com/lexis/LexicalEntryUMAd10015>
+        rdf:type    ontolex:LexicalEntry ;
+        rdfs:label  "μεγάλως" .
+
+<http://www.exaple.com/lexis/LexicalEntryUMAd10040>
+        rdf:type    ontolex:LexicalEntry ;
+        rdfs:label  "μειονεκτικά" .
+
+<http://www.exaple.com/lexis/LexicalEntryUMAd10075>
+        rdf:type    ontolex:LexicalEntry ;
+        rdfs:label  "μελοδραματικά" .
+
+<http://www.exaple.com/lexis/LexicalEntryUMAd10109>
+        rdf:type    ontolex:LexicalEntry ;
+        rdfs:label  "μεροληπτικά" .
+
+<http://www.exaple.com/lexis/LexicalEntryUMAd10133>
+        rdf:type    ontolex:LexicalEntry ;
+        rdfs:label  "μεσολαβητικά" .
+
+<http://www.exaple.com/lexis/LexicalEntryUMAd10140>
+        rdf:type    ontolex:LexicalEntry ;
+        rdfs:label  "μεσοπέλαγα" .
+
+<http://www.exaple.com/lexis/LexicalEntryUMAd1026>
+        rdf:type    ontolex:LexicalEntry ;
+        rdfs:label  "αναιδώς" .
+
+<http://www.exaple.com/lexis/LexicalEntryUMAd1027>
+        rdf:type    ontolex:LexicalEntry ;
+        rdfs:label  "αναίμακτα" .
+
+<http://www.exaple.com/lexis/LexicalEntryUMAd10282>
+        rdf:type    ontolex:LexicalEntry ;
+        rdfs:label  "μετοχικά" .
