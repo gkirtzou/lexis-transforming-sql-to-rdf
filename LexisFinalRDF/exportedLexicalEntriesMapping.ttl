@@ -6,41 +6,61 @@
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns> .
 
 <http://www.exaple.com/lexis/LexicalEntryUMAd10011>
-        rdf:type    ontolex:LexicalEntry ;
-        rdfs:label  "μεγαλόψυχα" .
+        rdf:type              ontolex:LexicalEntry ;
+        rdfs:label            "μεγαλόψυχα"@el ;
+        lexis:partOfSpeech    "Adverb" ;
+        lexinfo:partOfSpeech  "Adverb" .
 
 <http://www.exaple.com/lexis/LexicalEntryUMAd10015>
-        rdf:type    ontolex:LexicalEntry ;
-        rdfs:label  "μεγάλως" .
+        rdf:type              ontolex:LexicalEntry ;
+        rdfs:label            "μεγάλως"@el ;
+        lexis:partOfSpeech    "Adverb" ;
+        lexinfo:partOfSpeech  "Adverb" .
 
 <http://www.exaple.com/lexis/LexicalEntryUMAd10040>
-        rdf:type    ontolex:LexicalEntry ;
-        rdfs:label  "μειονεκτικά" .
+        rdf:type              ontolex:LexicalEntry ;
+        rdfs:label            "μειονεκτικά"@el ;
+        lexis:partOfSpeech    "Adverb" ;
+        lexinfo:partOfSpeech  "Adverb" .
 
 <http://www.exaple.com/lexis/LexicalEntryUMAd10075>
-        rdf:type    ontolex:LexicalEntry ;
-        rdfs:label  "μελοδραματικά" .
+        rdf:type              ontolex:LexicalEntry ;
+        rdfs:label            "μελοδραματικά"@el ;
+        lexis:partOfSpeech    "Adverb" ;
+        lexinfo:partOfSpeech  "Adverb" .
 
 <http://www.exaple.com/lexis/LexicalEntryUMAd10109>
-        rdf:type    ontolex:LexicalEntry ;
-        rdfs:label  "μεροληπτικά" .
+        rdf:type              ontolex:LexicalEntry ;
+        rdfs:label            "μεροληπτικά"@el ;
+        lexis:partOfSpeech    "Adverb" ;
+        lexinfo:partOfSpeech  "Adverb" .
 
 <http://www.exaple.com/lexis/LexicalEntryUMAd10133>
-        rdf:type    ontolex:LexicalEntry ;
-        rdfs:label  "μεσολαβητικά" .
+        rdf:type              ontolex:LexicalEntry ;
+        rdfs:label            "μεσολαβητικά"@el ;
+        lexis:partOfSpeech    "Adverb" ;
+        lexinfo:partOfSpeech  "Adverb" .
 
 <http://www.exaple.com/lexis/LexicalEntryUMAd10140>
-        rdf:type    ontolex:LexicalEntry ;
-        rdfs:label  "μεσοπέλαγα" .
+        rdf:type              ontolex:LexicalEntry ;
+        rdfs:label            "μεσοπέλαγα"@el ;
+        lexis:partOfSpeech    "Adverb" ;
+        lexinfo:partOfSpeech  "Adverb" .
 
 <http://www.exaple.com/lexis/LexicalEntryUMAd1026>
-        rdf:type    ontolex:LexicalEntry ;
-        rdfs:label  "αναιδώς" .
+        rdf:type              ontolex:LexicalEntry ;
+        rdfs:label            "αναιδώς"@el ;
+        lexis:partOfSpeech    "Adverb" ;
+        lexinfo:partOfSpeech  "Adverb" .
 
 <http://www.exaple.com/lexis/LexicalEntryUMAd1027>
-        rdf:type    ontolex:LexicalEntry ;
-        rdfs:label  "αναίμακτα" .
+        rdf:type              ontolex:LexicalEntry ;
+        rdfs:label            "αναίμακτα"@el ;
+        lexis:partOfSpeech    "Adverb" ;
+        lexinfo:partOfSpeech  "Adverb" .
 
 <http://www.exaple.com/lexis/LexicalEntryUMAd10282>
-        rdf:type    ontolex:LexicalEntry ;
-        rdfs:label  "μετοχικά" .
+        rdf:type              ontolex:LexicalEntry ;
+        rdfs:label            "μετοχικά"@el ;
+        lexis:partOfSpeech    "Adverb" ;
+        lexinfo:partOfSpeech  "Adverb" .
