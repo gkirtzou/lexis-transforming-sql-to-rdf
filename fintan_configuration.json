@@ -41,6 +41,15 @@
       "class": "IOStreamDuplicator"
     },
     {
+      "componentInstance": "loadLexicalEntriesToGraph",
+      "class": "RDFStreamLoader",
+      "lang": "Turtle",
+      "globalPrefixes": true,
+      //split after every linebreak
+      "delimiter": "",
+      "split": true
+    },
+    {
       "componentInstance": "gramcatMappingTarql",
       "class": "TarqlStreamTransformer",
       "query": "scripts/gramcatConstructMapping.tarql",
@@ -57,7 +66,36 @@
     {
       "componentInstance": "duplicateGramcatTarqlResults",
       "class": "IOStreamDuplicator"
-    }   
+    }, 
+    {
+      "componentInstance": "loadGramcatToGraph",
+      "class": "RDFStreamLoader",
+      "lang": "Turtle",
+      "globalPrefixes": true,
+      //never split
+      "delimiter": null,
+      "split": false
+    },
+    {
+      "componentInstance": "updatePOS",
+      "class": "RDFUpdater",
+      "threads": "0",
+      "lookahead": "0",
+      "lookback": "0",
+      "updates": [
+        {
+          "path": "scripts/gramcatUpdatePOS.sparql",
+          "iter": 1
+        }
+      ]
+    },
+    {
+      "componentInstance": "writeTTL",
+      "class": "RDFStreamWriter",
+      "lang": "Turtle",
+      "delimiter": "",
+      "prefixDeduplication": true
+    }
   ],
   "streams": [
     // Stream 1
@@ -84,10 +122,21 @@
     // Export LexicalEntries TARQL results as a transformed mapping file
     {
       "readsFromInstance": "duplicateLexicalEntriesTarqlResults",
-      "readsFromInstanceGraph": "",
       "writesToDestination": "LexisFinalRDF/exportedLexicalEntriesMapping.ttl"
     },
-
+    // Load Lexical Entries TARQL results into segmented Graph
+    {
+      "readsFromInstance": "duplicateLexicalEntriesTarqlResults",
+      "writesToInstance": "loadLexicalEntriesToGraph",
+      "writesToInstanceGraph": "lexicalEntries"
+    },
+    // Load Lexical Entries to Updater
+    {
+      "readsFromInstance": "loadLexicalEntriesToGraph",
+      "readsFromInstanceGraph": "lexicalEntries",
+      "writesToInstance": "updatePOS",
+      "writesToInstanceGraph": ""
+    },
     // Stream 2
     // Read Gramcat Mapping file into TARQL
     {
@@ -107,6 +156,34 @@
       "readsFromInstance": "duplicateGramcatTarqlResults",
       "readsFromInstanceGraph": "",
       "writesToDestination": "LexisFinalRDF/exportedGramcatMapping.ttl"
+    },
+    // Load Gramcat TARQL results into segmented Graph
+    {
+      "readsFromInstance": "duplicateGramcatTarqlResults",
+      "writesToInstance": "loadGramcatToGraph",
+      "writesToInstanceGraph": "gramcatMapping"
+    },
+    // Side-Load segmented Graph to Updater as named Graph <http://mapping>
+    {
+      "readsFromInstance": "loadGramcatToGraph",
+      "readsFromInstanceGraph": "gramcatMapping",
+      "writesToInstance": "updatePOS",
+      "writesToInstanceGraph": "http://mapping"
+    },
+
+    // Stream 3:  from here the streams 1 and 2 are merged
+    // Pipe results of updater into RDF Writer
+    {
+      "readsFromInstance": "updatePOS",
+      "readsFromInstanceGraph": "",
+      "writesToInstance": "writeTTL",
+      "writesToInstanceGraph": ""
+    },
+    // Export Output file
+    {
+      "readsFromInstance": "writeTTL",
+      "readsFromInstanceGraph": "",
+      "writesToDestination": "LexisFinalRDF/lexis.ttl"
     }
   ]
 }
