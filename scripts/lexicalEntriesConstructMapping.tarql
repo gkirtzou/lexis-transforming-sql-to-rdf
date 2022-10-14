@@ -1,8 +1,11 @@
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema>
-PREFIX lexinfo: <http://www.lexinfo.net/ontology/3.0/lexinfo>
-PREFIX ontolex: <http://www.w3.org/ns/lemon/ontolex>
-PREFIX lexis: <http://www.exaple.com/lexis>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX lexinfo: <http://www.lexinfo.net/ontology/3.0/lexinfo#>
+PREFIX ontolex: <http://www.w3.org/ns/lemon/ontolex#>
+PREFIX lime: <http://www.w3.org/ns/lemon/lime#>
+PREFIX conll: <http://ufal.mff.cuni.cz/conll2009-st/task-description.html#>
+PREFIX apertium: <http://wiki.apertium.org/wiki/Bidix#>
+PREFIX lexis: <http://www.exaple.com/lexis#>
 
 CONSTRUCT {
   ?le_uri rdf:type ontolex:LexicalEntry;

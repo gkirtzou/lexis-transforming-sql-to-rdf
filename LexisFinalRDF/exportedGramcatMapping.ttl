@@ -1,69 +1,97 @@
-@base          <file:///home/gkirtzou/OneDrive/Projects/Lexis/Source/lexis-transforming-sql-to-rdf/scripts/gramcatConstructMapping.tarql> .
-@prefix conll:  <https://github.com/acoli-repo/conll-rdf/blob/master/owl/conll.ttl#> .
+@base          <file:///media/ranis/exFAT/_SVN/git/gkirtzou/lexis-transforming-sql-to-rdf_old/scripts/gramcatConstructMapping.tarql> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix conll:  <http://ufal.mff.cuni.cz/conll2009-st/task-description.html#> .
+@prefix lime:  <http://www.w3.org/ns/lemon/lime#> .
+@prefix lexis:  <http://www.exaple.com/lexis#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ontolex:  <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix lexinfo:  <http://www.lexinfo.net/ontology/3.0/lexinfo#> .
+@prefix apertium:  <http://wiki.apertium.org/wiki/Bidix#> .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#preposition>
+lexinfo:adverb  conll:replace  "Adverb" .
+
+lexinfo:adjective  conll:replace  "Adjective" .
+
+lexinfo:preposition  conll:replace  "Adposition" ;
         conll:replace  "Adposition Preposition" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#definiteArticle>
+lexinfo:definiteArticle
+        conll:replace  "Article" ;
         conll:replace  "Article Definite" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#indefiniteArticle>
+lexinfo:indefiniteArticle
+        conll:replace  "Article" ;
         conll:replace  "Article Indefinite" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#coordinatingConjunction>
+lexinfo:coordinatingConjunction
+        conll:replace  "Conjunction" ;
         conll:replace  "Conjunction Coordinative" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#subordinatingConjunction>
+lexinfo:subordinatingConjunction
+        conll:replace  "Conjunction" ;
         conll:replace  "Conjunction Subordinative" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#cardinalNumeral>
+lexinfo:interjection  conll:replace  "Interjection" .
+
+lexinfo:cardinalNumeral
+        conll:replace  "Numeral" ;
         conll:replace  "Numeral Cardinal" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#multiplicativeNumeral>
+lexinfo:multiplicativeNumeral
+        conll:replace  "Numeral" ;
         conll:replace  "Numeral Multiplicative" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#commonNoun>
+lexinfo:commonNoun  conll:replace  "Noun" ;
         conll:replace  "Noun Common" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#properNoun>
+lexinfo:properNoun  conll:replace  "Noun" ;
         conll:replace  "Noun Proper" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#demonstrativePronoun>
+lexinfo:demonstrativePronoun
+        conll:replace  "Pronoun" ;
         conll:replace  "Pronoun Demonstrative" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#indefinitePronoun>
+lexinfo:indefinitePronoun
+        conll:replace  "Pronoun" ;
         conll:replace  "Pronoun Indefinite" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#interrogativePronoun>
+lexinfo:interrogativePronoun
+        conll:replace  "Pronoun" ;
         conll:replace  "Pronoun Interrogative" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#personalPronoun>
+lexinfo:personalPronoun
+        conll:replace  "Pronoun" ;
         conll:replace  "Pronoun Personal" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#possessivePronoun>
+lexinfo:possessivePronoun
+        conll:replace  "Pronoun" ;
         conll:replace  "Pronoun Possessive" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#relativePronoun>
+lexinfo:relativePronoun
+        conll:replace  "Pronoun" ;
         conll:replace  "Pronoun Relative" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#reflexivePersonalPronoun>
+lexinfo:reflexivePersonalPronoun
+        conll:replace  "Pronoun" ;
         conll:replace  "Pronoun Reflexive" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#irreflexivePersonalPronoun>
+lexinfo:irreflexivePersonalPronoun
+        conll:replace  "Pronoun" ;
         conll:replace  "Pronoun Relindef" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#futureParticle>
+lexinfo:futureParticle
+        conll:replace  "Unique" ;
         conll:replace  "Unique Future" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#negativeParticle>
+lexinfo:negativeParticle
+        conll:replace  "Unique" ;
         conll:replace  "Unique Negation" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#particle>
+lexinfo:particle  conll:replace  "Unique" ;
         conll:replace  "Unique Other" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#symbol>
+lexinfo:symbol  conll:replace  "Residual" ;
         conll:replace  "Residual Symbol" .
 
-<http://www.lexinfo.net/ontology/3.0/lexinfo#mainVerb>
+lexinfo:mainVerb  conll:replace  "Verb" ;
         conll:replace  "Verb Main" .

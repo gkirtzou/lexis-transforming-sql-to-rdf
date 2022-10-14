@@ -1,9 +1,18 @@
-PREFIX conll: <https://github.com/acoli-repo/conll-rdf/blob/master/owl/conll.ttl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX lexinfo: <http://www.lexinfo.net/ontology/3.0/lexinfo#>
+PREFIX ontolex: <http://www.w3.org/ns/lemon/ontolex#>
+PREFIX lime: <http://www.w3.org/ns/lemon/lime#>
+PREFIX conll: <http://ufal.mff.cuni.cz/conll2009-st/task-description.html#>
+PREFIX apertium: <http://wiki.apertium.org/wiki/Bidix#>
+PREFIX lexis: <http://www.exaple.com/lexis#>
 
 
 CONSTRUCT {
-  ?map_uri conll:replace ?mapped
+  ?map_uri conll:replace ?mapped .
+  ?map_uri conll:replace ?mapped2
 } WHERE {
-  BIND(CONCAT(?GRAMCATEN, ' ', ?GRAMSUBCATEN) as ?mapped)
   BIND(URI(?map) as ?map_uri)
+  BIND(?GRAMCATEN as ?mapped)
+  BIND(CONCAT(?GRAMCATEN, ' ', ?GRAMSUBCATEN) as ?mapped2)
 }
