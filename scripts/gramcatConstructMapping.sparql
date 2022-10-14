@@ -6,13 +6,11 @@ PREFIX conll: <http://ufal.mff.cuni.cz/conll2009-st/task-description.html#>
 PREFIX lexis: <http://www.exaple.com/lexis/>
 
 CONSTRUCT {
-  ?le_uri rdf:type ontolex:LexicalEntry;
-          rdfs:label ?labelWithLang ;
-          lexis:partOfSpeech ?c;
-          lexinfo:partOfSpeech ?c
-  .
-}
-WHERE {
-  BIND(URI(CONCAT('http://www.exaple.com/lexis/LexicalEntry', ?a)) as ?le_uri)
-  BIND (STRLANG(?b, "el") AS ?labelWithLang)
+  ?map_uri conll:replace ?mapped .
+  ?map_uri conll:replace ?mapped2
+} WHERE {
+  BIND(URI(?map) as ?map_uri)
+  BIND(?GRAMCATEN as ?mapped)
+  BIND(CONCAT(?GRAMCATEN, ' ', ?GRAMSUBCATEN) as ?mapped2)
+
 }

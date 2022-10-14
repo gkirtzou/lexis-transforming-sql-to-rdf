@@ -1,8 +1,9 @@
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema$>
 PREFIX lexinfo: <http://www.lexinfo.net/ontology/3.0/lexinfo#>
-PREFIX ontolex: <http://www.w3.org/ns/lemon/ontolex>
-PREFIX conll: <https://github.com/acoli-repo/conll-rdf/blob/master/owl/conll.ttl#>
-PREFIX lexis: <http://www.example.com/lexis/>
+PREFIX ontolex: <http://www.w3.org/ns/lemon/ontolex#>
+PREFIX conll: <http://ufal.mff.cuni.cz/conll2009-st/task-description.html#>
+PREFIX lexis: <http://www.exaple.com/lexis/>
 
 DELETE {
   ?entry lexinfo:partOfSpeech ?lexis_tag .
