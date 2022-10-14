@@ -3,7 +3,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema$>
 PREFIX lexinfo: <http://www.lexinfo.net/ontology/3.0/lexinfo#>
 PREFIX ontolex: <http://www.w3.org/ns/lemon/ontolex#>
 PREFIX conll: <http://ufal.mff.cuni.cz/conll2009-st/task-description.html#>
-PREFIX lexis: <http://www.exaple.com/lexis/>
+PREFIX lexis: <http://www.example.com/lexis/>
 
 CONSTRUCT {
   ?map_uri conll:replace ?mapped .

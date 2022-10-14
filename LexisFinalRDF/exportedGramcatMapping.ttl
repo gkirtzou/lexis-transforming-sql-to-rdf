@@ -1,7 +1,7 @@
 @base          <file:///home/gkirtzou/OneDrive/Projects/Lexis/Source/lexis-transforming-sql-to-rdf/scripts/gramcatConstructMapping.sparql> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix conll:  <http://ufal.mff.cuni.cz/conll2009-st/task-description.html#> .
-@prefix lexis:  <http://www.exaple.com/lexis/> .
+@prefix lexis:  <http://www.example.com/lexis/> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema$> .
 @prefix ontolex:  <http://www.w3.org/ns/lemon/ontolex#> .
 @prefix lexinfo:  <http://www.lexinfo.net/ontology/3.0/lexinfo#> .
